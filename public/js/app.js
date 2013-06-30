@@ -5,7 +5,7 @@ define(
         'directives',
         'controllers'
     ],
-    function (globals, filters, services, directives, controllers) {
+    function (globals) {
         'use strict';
 
         /* kudos: http://stackoverflow.com/questions/12603914/reset-form-to-pristine-state-angularjs-1-0-x */
