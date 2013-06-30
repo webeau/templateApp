@@ -1,7 +1,7 @@
 {
   "name": "templateApp",
   "description": "A template application to use as foundation for express 3.x apps. Utilizes AngularJS, RequireJS and Twitter bootstrap on the client side.",
-  "version": "0.1",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
