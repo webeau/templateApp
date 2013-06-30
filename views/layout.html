@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="E=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="/css/style.min.css" rel="stylesheet">
+</head>
+<body data-ng-cloak>
+{{{yield}}}
+<div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <!--<script src="/js/vendor/angular-1.0.7/angular.min.js"></script>-->
+    <script src="/js/vendor/angular-ui-bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
+
+    <!-- use in development -->
+    <script data-main="/js/main" src="/js/vendor/require-2.1.6/require.js"></script>
+
+    <!-- use in production -->
+    <!--<script data-main="/js/main-build" src="/js/vendor/require-2.1.6/require.js"></script>-->
+</div>
+</body>
+</html>
