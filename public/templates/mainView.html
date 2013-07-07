@@ -1,9 +1,12 @@
+<h2>Welcome to TemplateApp</h2>
+<br>
+<br>
 <div data-ng-controller="ExampleCtrl">
     <p>
         {{message}}
     </p>
     <input type="text" data-ng-model="message"/>
-    <input type="button" data-ng-click="handleClick()" value="Transfer"/>
+    <input class="btn btn-primary" type="button" data-ng-click="handleClick()" value="Transfer"/>
 </div>
 <br>
 <div data-ng-controller="Example2Ctrl">
@@ -11,4 +14,8 @@
         {{message}}
     </p>
     <input type="text" data-ng-model="message"/>
+</div>
+<br>
+<div class="version-area">
+    {{ 'Current version is v%VERSION%.' | interpolate }}
 </div>

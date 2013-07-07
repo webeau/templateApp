@@ -16,6 +16,14 @@ define(['globals'], function (globals) {
                         }
                     }
                 });
+            $routeProvider.when('/about',
+                {
+                    templateUrl: 'templates/about.html'
+                });
+            $routeProvider.when('/contact',
+                {
+                    templateUrl: 'templates/contact.html'
+                });
 
             //all other routes redirects to /
             $routeProvider.otherwise({redirectTo: '/'});

@@ -11,16 +11,29 @@
     <link href="/css/style.min.css" rel="stylesheet">
 </head>
 <body data-ng-cloak>
-	<h1>TemplateApp</h1>
-	<p>Welcome to TemplateApp</p>
-	<br>
-	<div data-ng-view>
-		
-	</div>
-	<br>
-	<div class="version-area">
-	    {{ 'Current version is v%VERSION%.' | interpolate }}
-	</div>
+	
+	<div class="navbar navbar-inverse navbar-fixed-top" data-ng-controller="NavbarCtrl">
+    	<div class="navbar-inner">
+        	<div class="container">
+          		<button type="button" class="btn btn-navbar" data-ng-click="isCollapsed = !isCollapsed">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+          		</button>
+          		<a class="brand" href="/">TemplateApp</a>
+          		<div class="nav-collapse collapse" collapse="isCollapsed">
+            		<ul class="nav">
+              			<li data-ng-class="class(1)"><a href="/" data-ng-click="select(1)">Home</a></li>
+              			<li data-ng-class="class(2)"><a href="/about" data-ng-click="select(2)">About</a></li>
+              			<li data-ng-class="class(3)"><a href="/contact" data-ng-click="select(3)">Contact</a></li>
+            		</ul>
+          		</div><!--/.nav-collapse -->
+        	</div>
+      	</div>
+    </div>
+    <div class="container" data-ng-view>
+
+    </div> <!-- /container -->
 	<div>
 	    <!--<script src="/js/vendor/angular-1.0.7/angular.js"></script>-->
 	    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
