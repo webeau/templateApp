@@ -18,6 +18,10 @@ if ('development' == app.get('env')) {
 //setting routes
 app.get('/api/test', api.test);
 
+//since this is a single-page-app, 404 is redirected to root
+app.use(function(req,res){
+  res.redirect('/');
+});
 
 //##########################################
 //##### optimze with requirejs #############
