@@ -1,11 +1,15 @@
 define([], function() {
-    return ['$scope', '$http', 'exampleService', function($scope, $http, exampleService) {
+    return ['$scope', 'exampleService', function($scope, exampleService) {
 
         $scope.message = 'Hello, ExampleCtrl!';
-
+        $scope.promiseTest = exampleService.getWithPromise();
+        $scope.promiseTest.then(
+            function(data){console.log('promiseTest.then --> success', data);},
+            function(response){console.log('promiseTest.then --> error', response);}
+        );
 
         $scope.handleClick = function(){
-            exampleService.test('[From ExampleCtrl] ' + $scope.message);
+            exampleService.broadcast('[From ExampleCtrl] ' + $scope.message);
         };
 
         // because this has happened asynchroneusly we've missed

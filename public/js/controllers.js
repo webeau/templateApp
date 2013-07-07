@@ -14,14 +14,14 @@ define(
                     '$scope',
                     '$injector',
                     'exampleService',
-                    function($scope, $injector, exampleService) {
+                    function($scope, $injector, exampleService, apiService) {
                         require(['controllers/ExampleCtrl'], function(ExampleCtrl) {
                             $injector.invoke(
                                 ExampleCtrl,
                                 this,
                                 {
                                     '$scope': $scope,
-                                    exampleService: exampleService
+                                    'exampleService': exampleService
                                 }
                             );
                         });
@@ -41,10 +41,10 @@ define(
                                 this,
                                 {
                                     '$scope': $scope,
-                                    exampleService: exampleService
+                                    'exampleService': exampleService
                                 }
                             );
-                        })
+                        });
                     }
                 ]
             );

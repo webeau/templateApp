@@ -1,9 +1,9 @@
 define([], function() {
-    return ['$scope', '$http', 'exampleService', function($scope, $http, exampleService) {
+    return ['$scope', '$http', 'exampleService', function($scope, exampleService) {
 
         $scope.message = 'Hello, Example2Ctrl!';
 
-        $scope.$on('test', function () {
+        $scope.$on('broadcast', function () {
             $scope.message = exampleService.text;
         });
 
