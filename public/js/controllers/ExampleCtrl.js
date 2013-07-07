@@ -1,12 +1,16 @@
 define([], function() {
-    return ['$scope', 'exampleService', function($scope, exampleService) {
+    return ['$scope', '$route', 'exampleService', function($scope, $route, exampleService) {
 
         $scope.message = 'Hello, ExampleCtrl!';
-        $scope.promiseTest = exampleService.getWithPromise();
-        $scope.promiseTest.then(
-            function(data){console.log('promiseTest.then --> success', data);},
-            function(response){console.log('promiseTest.then --> error', response);}
+        $scope.testData = $route.current.locals.testData;
+        console.log('loaded through resolve with promise, testdata:', $scope.testData);
+
+        $scope.testData2 = exampleService.getWithPromise();
+        $scope.testData2.then(
+            function(data){console.log('loaded through service with promise, testData2:', data);},
+            function(response){console.log('error when loading through service with promise', response);}
         );
+
 
         $scope.handleClick = function(){
             exampleService.broadcastText('[From ExampleCtrl] ' + $scope.message);
