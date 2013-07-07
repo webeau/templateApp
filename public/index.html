@@ -16,7 +16,7 @@
 	<br>
 	<div data-ng-controller="ExampleCtrl">
 	    <p>
-	        [[message]]
+	        {{message}}
 	    </p>
 	    <input type="text" data-ng-model="message"/>
 	    <input type="button" data-ng-click="handleClick()" value="Transfer"/>
@@ -24,13 +24,13 @@
 	<br>
 	<div data-ng-controller="Example2Ctrl">
 	    <p>
-	        [[message]]
+	        {{message}}
 	    </p>
 	    <input type="text" data-ng-model="message"/>
 	</div>
 	<br>
 	<div class="version-area">
-	    [[ 'Current version is v%VERSION%.' | interpolate ]]
+	    {{ 'Current version is v%VERSION%.' | interpolate }}
 	</div>
 	<div>
 	    <!--<script src="/js/vendor/angular-1.0.7/angular.js"></script>-->

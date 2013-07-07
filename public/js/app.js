@@ -38,8 +38,9 @@ define(
                 globals.appName + '.directives'
             ]
         ).config(['$interpolateProvider', function ($interpolateProvider) {
-            $interpolateProvider.startSymbol(globals.interpolateProvider.startSymbol);
-            $interpolateProvider.endSymbol(globals.interpolateProvider.endSymbol);
+            $interpolateProvider
+                .startSymbol(globals.interpolateProvider.startSymbol)
+                .endSymbol(globals.interpolateProvider.endSymbol);
         }]);
     }
 );

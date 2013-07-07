@@ -5,8 +5,8 @@ define([], function() {
     return {
         appName: 'templateApp',
         interpolateProvider: {
-            startSymbol: '[[',
-            endSymbol: ']]'
+            startSymbol: '{{',
+            endSymbol: '}}'
         }
     };
 });
