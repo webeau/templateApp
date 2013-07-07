@@ -6,9 +6,9 @@ define(['globals'], function (globals) {
             var service = {};
             service.text = '';
 
-            service.broadcast = function (text) {
+            service.broadcastText = function (text) {
                 this.text = text;
-                $rootScope.$broadcast('broadcast');
+                $rootScope.$broadcast('broadcastText');
             };
 
             service.getWithPromise = function () {

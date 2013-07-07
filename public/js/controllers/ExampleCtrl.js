@@ -9,7 +9,7 @@ define([], function() {
         );
 
         $scope.handleClick = function(){
-            exampleService.broadcast('[From ExampleCtrl] ' + $scope.message);
+            exampleService.broadcastText('[From ExampleCtrl] ' + $scope.message);
         };
 
         // because this has happened asynchroneusly we've missed

@@ -14,19 +14,8 @@
 	<h1>TemplateApp</h1>
 	<p>Welcome to TemplateApp</p>
 	<br>
-	<div data-ng-controller="ExampleCtrl">
-	    <p>
-	        {{message}}
-	    </p>
-	    <input type="text" data-ng-model="message"/>
-	    <input type="button" data-ng-click="handleClick()" value="Transfer"/>
-	</div>
-	<br>
-	<div data-ng-controller="Example2Ctrl">
-	    <p>
-	        {{message}}
-	    </p>
-	    <input type="text" data-ng-model="message"/>
+	<div data-ng-view>
+		
 	</div>
 	<br>
 	<div class="version-area">
@@ -34,7 +23,7 @@
 	</div>
 	<div>
 	    <!--<script src="/js/vendor/angular-1.0.7/angular.js"></script>-->
-	    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
 	    <script src="/js/vendor/angular-1.0.7/angular-resource.min.js"></script>
 	    <script src="/js/vendor/angular-ui-bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
 

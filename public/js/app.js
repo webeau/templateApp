@@ -3,7 +3,8 @@ define(
         'filters',
         'services',
         'directives',
-        'controllers'
+        'controllers',
+        'routes'
     ],
     function (globals) {
         'use strict';
@@ -35,7 +36,8 @@ define(
                 globals.appName + '.controllers',
                 globals.appName + '.filters',
                 globals.appName + '.services',
-                globals.appName + '.directives'
+                globals.appName + '.directives',
+                globals.appName + '.routes'
             ]
         ).config(['$interpolateProvider', function ($interpolateProvider) {
             $interpolateProvider
