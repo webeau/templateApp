@@ -14,7 +14,7 @@ define(
                 [
                     '$scope',
                     '$injector',
-                    function($scope, $injector, exampleService) {
+                    function($scope, $injector) {
                         require(['controllers/NavbarCtrl'], function(NavbarCtrl) {
                             $injector.invoke(
                                 NavbarCtrl,
