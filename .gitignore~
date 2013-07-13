@@ -172,4 +172,4 @@ main-built.js
 *.sublime-project
 *.sublime-workspace
 .project
-src/node_modules/*
+node_modules/*

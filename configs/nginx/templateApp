@@ -1,0 +1,22 @@
+server {
+        listen 80;
+        listen [::]:80 ipv6only=on;
+
+        server_name templateapp.com www.templateapp.com;
+
+        # static files in /public of the node application
+        location / {
+                root            /var/www/templateapp/public/;
+                index           index.html;
+
+                # redirect to the node application
+                error_page      403 = @backend;
+                error_page      404 = @backend;
+        }
+
+        # dynamic stuff in the node application
+        location @backend {
+                proxy_pass              http://127.0.0.1:3000;
+                proxy_set_header        x-Client-IP $remote_addr;
+        }
+}
