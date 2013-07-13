@@ -1,5 +1,5 @@
 #templateApp
-================================
+
 ##About
 A template aimed to help people getting started in building wonderful apps using **NodeJS**, **AngularJS** and **Twitter Bootstrap**. The template is structured in an AMD pattern using **RequireJS** as a loader and optimizer. 
 
