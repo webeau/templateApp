@@ -1,7 +1,8 @@
 var express = require('express')
   , api = require('./routes/api')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , util = require('util');
 
 var app = express();
 
@@ -23,20 +24,30 @@ app.use(function(req,res){
   res.redirect('/');
 });
 
-//##########################################
-//##### optimze with requirejs #############
-//##########################################
-require('requirejs').optimize({
+
+var startOptmization = function() {
+  util.log('RequireJS optimization started...');
+  require('requirejs').optimize({
     baseUrl: 'public/js',
     name: 'main',
     out: 'public/js/main-build.js',
     optimize: 'uglify2'
-}, function (buildResponse) {
-	console.log('RequireJS optimization done!', buildResponse);
-});
-//##########################################
-//##########################################
+  }, function (buildResponse) {
+    util.log('RequireJS optimization done!');
+    startListening();
+  });
+};
 
-app.listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+var startListening = function(){
+  app.listen(app.get('port'), function(){
+    util.log('Express server listening on port ' + app.get('port') + '!');
+  });
+};
+
+var startServer = function(){
+  util.log('Express server started...');
+  startOptmization();
+};
+
+//start instance
+startServer();
