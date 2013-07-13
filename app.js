@@ -26,16 +26,22 @@ app.use(function(req,res){
 
 
 var startOptmization = function() {
-  util.log('RequireJS optimization started...');
-  require('requirejs').optimize({
-    baseUrl: 'public/js',
-    name: 'main',
-    out: 'public/js/main-build.js',
-    optimize: 'uglify2'
-  }, function (buildResponse) {
-    util.log('RequireJS optimization done!');
-    startListening();
-  });
+  var jsRoot = path.join(__dirname, 'public/js')
+
+  try {
+    util.log('RequireJS optimization started...');
+    require('requirejs').optimize({
+      baseUrl: jsRoot,
+      name: 'main',
+      out: path.join(jsRoot, 'main-built.js'),
+      optimize: 'uglify2'
+    }, function (buildResponse) {
+      util.log('RequireJS optimization done!');
+      startListening();
+    });
+  } catch(err) {
+    util.error('An error occurred when optimizing the javascript! ' + JSON.stringify(err));
+  }
 };
 
 var startListening = function(){

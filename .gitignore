@@ -168,7 +168,7 @@ pip-log.txt
 .idea/
 
 *.log
-main-build.js
+main-built.js
 *.sublime-project
 *.sublime-workspace
 .project
