@@ -5,6 +5,8 @@ A template aimed to help people getting started in building wonderful apps using
 
 ##Dependencies
 * [NodeJS](http://nodejs.org)
+
+##Included
 * [Express 3.2.6](http://expressjs.com/)
 * [AngularJS 1.0.7](http://angularjs.org/)
 * [RequireJS 2.1.6](http://requirejs.org/)
@@ -27,4 +29,4 @@ type the following :
 
 ##Special thanks
 * To **tnajdek** since this template is based on his [angular-requirejs-seed](https://github.com/tnajdek/angular-requirejs-seed)
-* To **Reason** for providing and excellent [article](https://www.exratione.com/2013/02/nodejs-and-forever-as-a-service-simple-upstart-and-init-scripts-for-ubuntu/) on [NodeJS](http://nodejs.org) and [Forever](https://github.com/nodejitsu/forever)
+* To **Reason** for providing an excellent [article](https://www.exratione.com/2013/02/nodejs-and-forever-as-a-service-simple-upstart-and-init-scripts-for-ubuntu/) on [NodeJS](http://nodejs.org) and [Forever](https://github.com/nodejitsu/forever)
