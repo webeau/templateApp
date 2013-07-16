@@ -4,15 +4,15 @@ upstream api {
 }
 
 server {
-    # Listen on port 80 for IPv4
+	# Listen on port 80 for IPv4
 	listen 80;
 	#listen [::]:80 ipv6only=on;
 
 	# Set site root directory
-	root /var/www/cbird.info/public;
+	root /var/www/templateApp/public;
 
 	# Make site accessible from http://localhost/
-	server_name cbird.info www.cbird.info;
+	server_name templateApp.com www.templateApp.com;
 
 	# / action
 	location / {
